@@ -15,19 +15,30 @@
     </head>
     <body>
             <div class="container-fluid">
-                <h1>Top Words Used on Presidential Candidates Websites</h1>
-            <div class="row-fluid">
-                <div class="span6 trump left-side">
-                    <h2>Trump</h2>
+                <div class="centered"></div>
+                    <h2>Top Words used by Presdiential Candidates on their Websites</h2>
+                    <p>Data crawled using Beth Hills' <a href="https://github.com/bethanyhills/web-crawler/">Web Crawler</a></p>
+                    <div class="row-fluid">
+                        <div class="span12 text-center">
+                            <button type="button" class="btn btn-primary center-block" id="button">Switch</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="span6 clinton right-side">
-                    <h2>Clinton</h2>
+                <div class="row-fluid">
+                    <div class="span12 trump candidate">
+                            <h2>Donald Trump</h2>
+                            <p><a href="www.donaldjtrump.com">www.donaldjtrump.com</a></p>
+                    </div>
                 </div>
-            </div>
+                <div class="row-fluid">
+                    <div class="span12 clinton candidate">
+                        <h2>Hillary Clinton</h2>
+                        <p><a href="www.hillaryclinton.com">www.hillaryclinton.com</a></p>
+                    </div>
+                </div>
             </div>
     </body>
-        <script type="text/javascript" src="spider.js"></script>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="spider.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
 </html>

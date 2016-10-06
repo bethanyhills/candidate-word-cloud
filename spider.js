@@ -1,23 +1,18 @@
 
+
 var candidate = {'trump': words_trump, 'clinton': words_clinton}
 
 for (person in candidate) {
     person = person
     console.log('rendering ' + person + 's words!');
     words = candidate[person]
-    align = ''
-    if (person === 'trump') {
-        align = 'left';
-    }
-    else {
-        align = 'right';
-    }
+
     var color = d3.scale.linear()
             var color = d3.scale.linear()
                 .domain([0,5,20,35,50,60,65,70,80,90,100])
                 .range(["#0806B7", "#555CC1", "#848FC7", "#A3B2CC", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
 
-    d3.layout.cloud().size([600, 700])
+    d3.layout.cloud().size([1000, 600])
             .words(words)
             .rotate(0)
             .fontSize(function(d) { return d.size; })
@@ -26,13 +21,13 @@ for (person in candidate) {
 
     function draw(words) {
         d3.select("body").select('div.' + person).append("svg")
-                .attr("width", 650)
-                .attr("height", 750)
+                .attr("width", 1050)
+                .attr("height", 650)
                 .attr("class", "wordcloud")
                 .append("g")
                 // without the transform, words words would get cutoff to the left and top, they would
                 // appear outside of the SVG area
-                .attr("transform", "translate(200,300)")
+                .attr("transform", "translate(600,250)")
                 .selectAll("text")
                 .data(words)
                 .enter().append("text")
@@ -45,3 +40,12 @@ for (person in candidate) {
     }
 
 }
+
+
+
+$(function() {
+    $('.trump').hide();
+    $( "#button" ).click(function() {
+        $( ".trump, .clinton" ).toggle();
+    });
+});

@@ -1,15 +1,7 @@
 body {
-    font-family:"Lucida Grande","Droid Sans",Arial,Helvetica,sans-serif;
+    font-family:"Lucida Grande",Arial,Helvetica,sans-serif;
 }
 
-.bld {
-    font-weight: bold;
-}
-
-.left-side {
-    height: 900px;
-}
-
-.right-side {
-    height: 900px;
+h1, h2, p {
+    text-align: center;
 }
